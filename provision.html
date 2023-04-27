@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provision Automotive</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b7956f112a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="header.inner">
+        <div class="container">
+            <nav>
+                <img src="images/Adam-Wilson-logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <!--<li><a href="https://adamwilsondesign5.wordpress.com/2023/01/12/about-me/" target="_blank">Blog</a></li>-->
+                    <li><a href="contact.html">Contact</a></li>
+                    <i class="fas fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+
+    <!----------------------------portfolio--------------------------------------------->
+    <div id="inner-portfolio">
+        <div class="inner-container">
+            <div class="inner-portfolio-row">
+                <h1 class="inner-header">Provision Automotive</h1>
+                    <div class="inner-portfolio">
+                        <div class="desktop">
+                            <h2>Desktop Mockup</h2>
+                            <br>
+                            <br>
+                            <img src="images/portfolio webp/Provision/Provision-Home Page Design.webp">
+                        </div>
+                        <div class="mobile">
+                            <h2>Mobile Mockup</h2>
+                             <br>
+                             <br>
+                            <img src="images/portfolio webp/Provision/Provision-Home Page Design-mobile.webp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="portfolio.html" class="btn">VIEW MORE DESIGNS</a>
+    </div>
+
+
+<!------------------------------------contact----------------------------------->  
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> ahwilson3@my.waketech.edu</p>
+                <p><i class="fa-solid fa-phone"></i> (012)345-6789</p>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.linkedin.com/in/adam-wilson-web-designer/"><i class="fa-brands fa-linkedin"></i></i></a>
+                </div>
+                <a href="images/PortfolioResume.pdf" download class="btn btn2">DOWNLOAD CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright 2023 | All Rights Reserved</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+    }
+
+</script>
+
+    
+</body>
+</html>
