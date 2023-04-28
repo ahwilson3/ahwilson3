@@ -23,9 +23,10 @@ h1, h3 {
     width: 100%;
     height: 100vh;
     background-image: url(images/porfolio-hero-2.png);
-    background-size: cover;
-    background-position: -150px;
+    background-size: contain;
+    background-position: center center;
     background-repeat: no-repeat;
+
 }
 #header.inner {
     width: 100%;
@@ -86,10 +87,11 @@ nav ul li a:hover::after {
 .header-text {
     margin-top: 20%;
     font-size: 30px;
+    width: 80%;
 }
 
 .header-text h1 {
-    font-size: 145px;
+    font-size: 115px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -258,7 +260,7 @@ nav ul li a:hover::after {
 .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-gap: 70px;
     margin-top: 50px;
 }
 
@@ -505,8 +507,55 @@ form .btn2 {
     display: flex;
 }
 
+/*----------------------tablet---------------------------*/
+nav .fas {
+    display: none;
+}
 
+@media only screen and (max-width: 1000px){
+    #header {
+        background-repeat: no-repeat;
+    }
 
+    .header-text h1 {
+        font-size: 80px;
+    }
+
+    .header-text p {
+        font-size: 18px;
+    }
+
+    #header {
+        height: auto;
+    }
+
+    .container {
+        padding: 1px 8%;
+    }
+
+    .sub-title {
+        font-size: 45px;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+    }
+
+    .work-list {
+        grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+        grid-gap: 80px;
+    } 
+
+    .work img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+        margin-bottom: 100px;
+    }
+}
 /*------------------------mobile-------------------------------*/
 
 nav .fas {
@@ -516,17 +565,19 @@ nav .fas {
 @media only screen and (max-width: 600px){
     #header {
         background-image: url(images/portfolio-hero-mobile.png);
-        background-position: 0px;
+        background-position: center center;
         background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
     }
 
     .header-text {
-        margin-top: 50%;
+        margin-top: 30%;
         font-size: 16px;
     }
 
     .header-text h1 {
-        font-size: 60px;
+        font-size: 70px;
     }
 
     .logo {
@@ -613,5 +664,22 @@ nav .fas {
         padding: 2%;
         margin-right: 5px;
     }
+
+    .work img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+        margin-bottom: 50px;
+    }
+
+    .services-list {
+        grid-template-columns: repeat(auto-fit,minmax(100%, 1fr));
+    }
+
+    .work-list {
+        grid-template-columns: repeat(auto-fit,minmax(100%, 1fr));
+        grid-gap: 80px;
+    } 
     
 }
